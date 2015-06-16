@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 15, 2015 11:25:11 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.ihsinformatics.micronutrient.model.pojos.SpVisit" table="sp_visit" catalog="micronutrient" optimistic-lock="version">
+        <id name="visitId" type="int">
+            <column name="visit_id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="sp" class="com.ihsinformatics.micronutrient.model.pojos.Sp" fetch="select">
+            <column name="sp_id" not-null="true" />
+        </many-to-one>
+        <property name="visitDate" type="date">
+            <column name="visit_date" length="10" not-null="true" />
+        </property>
+        <property name="visitTime" type="timestamp">
+            <column name="visit_time" length="19" not-null="true" />
+        </property>
+        <property name="awareOfIodizationProcess" type="string">
+            <column name="aware_of_iodization_process" length="45" not-null="true" />
+        </property>
+        <property name="dropMatchesChakki" type="string">
+            <column name="drop_matches_chakki" length="45" not-null="true" />
+        </property>
+        <property name="kio3PreparedAsStandard" type="string">
+            <column name="`kio3_prepared_ as_standard`" length="45" not-null="true" />
+        </property>
+        <property name="totalSaltProduced" type="string">
+            <column name="total_salt_produced" length="45" not-null="true" />
+        </property>
+        <property name="edibleSaltProduction" type="string">
+            <column name="edible_salt_production" length="45" not-null="true" />
+        </property>
+        <property name="iodizedSaltProduced" type="string">
+            <column name="iodized_salt_produced" length="45" not-null="true" />
+        </property>
+        <property name="uniodizedSaltProduced" type="string">
+            <column name="uniodized_salt_produced" length="45" not-null="true" />
+        </property>
+        <property name="previousKio3Stock" type="string">
+            <column name="previous_kio3_stock" length="45" not-null="true" />
+        </property>
+        <property name="kio3Received" type="string">
+            <column name="kio3_received" length="45" not-null="true" />
+        </property>
+        <property name="existingStock" type="string">
+            <column name="existing_stock" length="45" not-null="true" />
+        </property>
+        <property name="kio3Utilized" type="string">
+            <column name="kio3_utilized" length="45" not-null="true" />
+        </property>
+        <property name="rtkResultsNoIodine" type="string">
+            <column name="rtk_results_no_iodine" length="45" not-null="true" />
+        </property>
+        <property name="rtkResults115" type="string">
+            <column name="rtk_results_1_15" length="45" not-null="true" />
+        </property>
+        <property name="rtkResults1629" type="string">
+            <column name="rtk_results_16_29" length="45" not-null="true" />
+        </property>
+        <property name="rtkResults30Above" type="string">
+            <column name="rtk_results_30_above" length="45" not-null="true" />
+        </property>
+        <property name="dripFeed" type="string">
+            <column name="drip_feed" length="45" not-null="true" />
+        </property>
+        <property name="dripSet" type="string">
+            <column name="drip_set" length="45" not-null="true" />
+        </property>
+        <property name="rtks" type="string">
+            <column name="rtks" length="45" not-null="true" />
+        </property>
+        <property name="noOfSamplesCollectedForQcl" type="string">
+            <column name="`no_of_samples_collected_ for_qcl`" length="45" not-null="true" />
+        </property>
+        <property name="packaging" type="string">
+            <column name="packaging" length="45" not-null="true" />
+        </property>
+        <property name="remarks" type="string">
+            <column name="remarks" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

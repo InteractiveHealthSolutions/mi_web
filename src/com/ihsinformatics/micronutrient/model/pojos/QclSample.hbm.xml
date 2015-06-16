@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 15, 2015 10:01:50 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.ihsinformatics.micronutrient.model.pojos.QclSample" table="qcl_sample" catalog="micronutrient" optimistic-lock="version">
+        <id name="sampleId" type="int">
+            <column name="sample_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="labId" type="int">
+            <column name="lab_id" not-null="true" />
+        </property>
+        <property name="collectionId" type="int">
+            <column name="collection_id" not-null="true" />
+        </property>
+        <property name="information" type="string">
+            <column name="information" length="45" not-null="true" />
+        </property>
+        <property name="category" type="string">
+            <column name="category" length="45" not-null="true" />
+        </property>
+        <property name="collectionDate" type="timestamp">
+            <column name="collection_date" length="19" not-null="true" />
+        </property>
+        <property name="analysisDate" type="timestamp">
+            <column name="analysis_date" length="19" not-null="true" />
+        </property>
+        <property name="results" type="string">
+            <column name="results" length="100" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

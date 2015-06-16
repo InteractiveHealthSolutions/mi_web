@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 15, 2015 11:25:11 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.ihsinformatics.micronutrient.model.pojos.Sp" table="sp" catalog="micronutrient" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="spId" type="int">
+            <column name="sp_id" not-null="true" />
+        </property>
+        <property name="spName" type="string">
+            <column name="sp_name" length="45" not-null="true" />
+        </property>
+        <property name="contactPerson" type="string">
+            <column name="contact_person" length="45" not-null="true" />
+        </property>
+        <property name="address" type="string">
+            <column name="address" length="45" not-null="true" />
+        </property>
+        <property name="contact1" type="string">
+            <column name="contact1" length="45" not-null="true" />
+        </property>
+        <property name="contact2" type="string">
+            <column name="contact2" length="45" not-null="true" />
+        </property>
+        <property name="contact3" type="string">
+            <column name="contact3" length="45" not-null="true" />
+        </property>
+        <property name="tehsilId" type="int">
+            <column name="tehsil_id" not-null="true" />
+        </property>
+        <property name="latitude" type="float">
+            <column name="latitude" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="longitude" type="float">
+            <column name="longitude" precision="12" scale="0" not-null="true" />
+        </property>
+        <set name="spVisits" table="sp_visit" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="sp_id" not-null="true" />
+            </key>
+            <one-to-many class="com.ihsinformatics.micronutrient.model.pojos.SpVisit" />
+        </set>
+    </class>
+</hibernate-mapping>

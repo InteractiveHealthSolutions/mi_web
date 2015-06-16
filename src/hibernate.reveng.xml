@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="micronutrient"/>
+  <table-filter match-name="district_logistic_summary"/>
+  <table-filter match-name="qcl_collection"/>
+  <table-filter match-name="sp_visit"/>
+  <table-filter match-name="user"/>
+  <table-filter match-name="district"/>
+  <table-filter match-name="province"/>
+  <table-filter match-name="qcl_sample"/>
+  <table-filter match-name="qcl_lab"/>
+  <table-filter match-name="tehsil"/>
+  <table-filter match-name="sp"/>
+</hibernate-reverse-engineering>

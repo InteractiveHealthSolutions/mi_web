@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 15, 2015 10:01:50 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.ihsinformatics.micronutrient.model.pojos.QclLab" table="qcl_lab" catalog="micronutrient" optimistic-lock="version">
+        <id name="labId" type="int">
+            <column name="lab_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="labName" type="string">
+            <column name="lab_name" length="45" not-null="true" />
+        </property>
+        <property name="province" type="string">
+            <column name="province" length="45" not-null="true" />
+        </property>
+        <property name="district" type="string">
+            <column name="district" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
